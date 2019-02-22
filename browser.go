@@ -55,6 +55,10 @@ func (u *UserAgent) evalBrowserName(ua string) bool {
 		case strings.Contains(ua, "yabrowser/"):
 			u.Browser.Name = BrowserYandex
 
+		// Android WebView on Android >= 4.4
+		case strings.Contains(ua, "version/4.0 chrome/"):
+			u.Browser.Name = BrowserAndroid
+			
 		// Edge, Silk and other chrome-identifying browsers must evaluate before chrome, unless we want to add more overhead
 		case strings.Contains(ua, "chrome/") || strings.Contains(ua, "crios/") || strings.Contains(ua, "chromium/") || strings.Contains(ua, "crmo/"):
 			u.Browser.Name = BrowserChrome
