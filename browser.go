@@ -83,7 +83,7 @@ func (u *UserAgent) evalBrowserName(ua string) bool {
 
 		// if we got this far and the device is iPhone or iPad, assume safari. Some agents don't actually contain the word "safari"
 		case strings.Contains(ua, "iphone") || strings.Contains(ua, "ipad"):
-			u.Browser.Name = BrowserSafari
+			u.Browser.Name = BrowserApple
 
 		// Google's search app on iPhone, leverages native Safari rather than Chrome
 		case strings.Contains(ua, " gsa/"):

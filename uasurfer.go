@@ -64,6 +64,7 @@ const (
 	BrowserYandexBot
 	BrowserCocCocBot
 	BrowserYahooBot // Bot list ends here
+	BrowserApple
 )
 
 // OSName (int) returns a constant.
